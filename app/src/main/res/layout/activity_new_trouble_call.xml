@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".NewTroubleCall">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollIndicators="right">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/csumb_banner_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/csumb_logo_black" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_trouble_call"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnSetStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_start_time"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnSetEndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_end_time" />
+
+                <Button
+                    android:id="@+id/btnSetLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_line" />
+
+                <Button
+                    android:id="@+id/btnSetMach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_machine" />
+
+                <TextView
+                    android:id="@+id/tvIssueDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/issue_description"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etIssueDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:focusable="auto"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="false"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/tvSolutionDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/solution_description"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etSolutionDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:focusable="auto"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="false"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/tvExtRef"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/external_reference_numbers"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etExtRef"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:focusable="auto"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="false"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/svListItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@color/colorPrimaryLight"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:scrollbars="vertical"
+                    android:visibility="gone">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnSaveCall"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/save_call" />
+
+</LinearLayout>

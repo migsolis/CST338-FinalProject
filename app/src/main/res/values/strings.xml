@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Trouble Call Tracker</string>
+    <string name="view_open_calls">View Open Calls</string>
+    <string name="view_closed_calls">View Closed Calls</string>
+    <string name="new_trouble_call">New Trouble Call</string>
+    <string name="csumb_banner_logo">CSUMB Banner Logo</string>
+    <string name="set_start_time">Set Start Time</string>
+    <string name="set_end_time">End Task</string>
+    <string name="set_line">Set Line</string>
+    <string name="issue_description">Issue Description</string>
+    <string name="solution_description">Solution Description</string>
+    <string name="external_reference_numbers">External Reference Numbers</string>
+    <string name="save_call">Save Call</string>
+    <string name="set_machine">Set Machine</string>
+    <string name="end_task">End Task</string>
+    <string name="task_complete">Task Completed</string>
+</resources>
